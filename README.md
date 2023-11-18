@@ -1,19 +1,19 @@
 # Easily add URL rewrites to a Laravel app
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ruthgeridema/laravel-url-rewrites.svg?style=flat-square)](https://packagist.org/packages/ruthgeridema/laravel-url-rewrites)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/improvit17/url-rewrites.svg?style=flat-square)](https://packagist.org/packages/improvit17/url-rewrites)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
-[![Build Status](https://travis-ci.org/ruthgeridema/laravel-url-rewrites.svg?branch=master)](https://travis-ci.org/ruthgeridema/laravel-url-rewrites)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ruthgeridema/laravel-url-rewrites.svg?style=flat-square)](https://scrutinizer-ci.com/g/ruthgeridema/laravel-url-rewrites)
+[![Build Status](https://travis-ci.org/improvit17/url-rewrites.svg?branch=master)](https://travis-ci.org/improvit17/url-rewrites)
+[![Quality Score](https://img.shields.io/scrutinizer/g/improvit17/url-rewrites.svg?style=flat-square)](https://scrutinizer-ci.com/g/improvit17/url-rewrites)
 [![StyleCI](https://styleci.io/repos/174381685/shield?branch=master)](https://styleci.io/repos/174381685)
-[![Total Downloads](https://img.shields.io/packagist/dt/ruthgeridema/laravel-url-rewrites.svg?style=flat-square)](https://packagist.org/packages/ruthgeridema/laravel-url-rewrites)
+[![Total Downloads](https://img.shields.io/packagist/dt/improvit17/url-rewrites.svg?style=flat-square)](https://packagist.org/packages/improvit17/url-rewrites)
 
 Very easy to use URL rewrite package. Follow the instructions and you're good to go!
 
-You can find an example project on my Github: [view example project](https://github.com/ruthgeridema/laravel-url-rewrites-example)  
+You can find an example project on my Github: [view example project](https://github.com/improvit17/url-rewrites-example)
 This example project features the following:
 - Eloquent observers to add URL rewrites automatically
 - Usage of the trait
 - Some use cases
-  
+
 ## Requirements
 
 This package requires Laravel 5.8 or higher, PHP 7.2 or higher and a database that supports json fields and functions such as MySQL 5.7 or higher.
@@ -23,12 +23,12 @@ This package requires Laravel 5.8 or higher, PHP 7.2 or higher and a database th
 You can install the package via composer:
 
 ``` bash
-composer require ruthgeridema/laravel-url-rewrites
+composer require improvit17/url-rewrites
 ```
 
 The package will automatically register itself.
 
-Register the routes the feeds will be displayed on using the `rewrites`-macro.  
+Register the routes the feeds will be displayed on using the `rewrites`-macro.
 You need to place it at the bottom of your routes file.
 
 ```php
@@ -83,13 +83,13 @@ Using Laravel Nova? You can publish the Nova class to App/Nova with the followin
 ```bash
 php artisan vendor:publish --provider="RuthgerIdema\UrlRewrite\ServiceProvider" --tag="nova"
 ```
-  
-In the near future I will publish a Laravel Nova package with features like reindexing the URL rewrites.  
+
+In the near future I will publish a Laravel Nova package with features like reindexing the URL rewrites.
 ## Usage
 
 ### Forward request
 
-Let's say you've got a controller route 'product/{id}' and you have a product 'Apple Airpods' with id=5.  
+Let's say you've got a controller route 'product/{id}' and you have a product 'Apple Airpods' with id=5.
 When you visit 'apple-airpods' this package will forward the request to the controller but keeps the clean url.
 
 The following code adds this to the database:
@@ -98,7 +98,7 @@ UrlRewrite::create('apple-airpods', 'product/5')
 ```
 
 ### Use named routes
-You must specify the types in the config. 
+You must specify the types in the config.
 ```php
 UrlRewrite::create('apple-airpods', null, 'product', ["id" => 5])
 ```
@@ -110,7 +110,7 @@ UrlRewrite::regenerateAll()
 UrlRewrite::regenerateRoutesFromType($type)
 ```
 
-To automatically add the URL attribute to an Eloquent model, you have to add the HasUrlRewrite trait to an Eloquent model.  
+To automatically add the URL attribute to an Eloquent model, you have to add the HasUrlRewrite trait to an Eloquent model.
 You also need to add the urlRewriteType and optionally add 'url' to the appends array.
 
 ```php
@@ -163,7 +163,7 @@ If you discover any security related issues, please email ruthger.idema@gmail.co
 
 ## Credits
 
-- [Ruthger Idema](https://github.com/ruthgeridema)
+- [Ruthger Idema](https://github.com/improvit17)
 - [All Contributors](../../contributors)
 
 Special thanks for Spatie for their guidelines and their packages as an inspiration

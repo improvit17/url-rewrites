@@ -1,12 +1,12 @@
 {
-  "name": "ruthgeridema/laravel-url-rewrites",
+  "name": "improvit17/url-rewrites",
   "description": "Easy URL rewrites in your Laravel application",
   "keywords": [
     "url",
     "rewrite",
     "laravel"
   ],
-  "homepage": "https://github.com/ruthgeridema/laravel-url-rewrites",
+  "homepage": "https://github.com/improvit17/url-rewrites",
   "license": "MIT",
   "authors": [
     {
@@ -16,7 +16,7 @@
     }
   ],
   "require": {
-    "php": "^7.2",
+    "php": "^8.1|^8.2",
     "laravel/framework": "*"
   },
   "require-dev": {
