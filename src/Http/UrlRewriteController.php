@@ -33,7 +33,7 @@ class UrlRewriteController
         return redirect($urlRewrite->target_path, $urlRewrite->getRedirectType());
     }
 
-    protected function forwardResponse($url): Response
+    protected function forwardResponse($url)
     {
         return Route::dispatch(
             Request::create(
